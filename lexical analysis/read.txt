@@ -1,0 +1,42 @@
+Brief explanation of what each class do in code - lex.py:
+
+1. Lexer Class
+The Lexer class is responsible for analyzing the input source code and generating a stream of tokens. A lexer (also known as a lexical analyzer) is the first step in the process of compiling or interpreting a program. It reads the source code, breaks it down into manageable chunks (tokens), and categorizes those chunks.
+
+Key methods:
+__init__(self, source): Initializes the lexer with the source code and prepares for lexing by setting the initial position and character.
+nextChar(self): Advances to the next character in the source code.
+peek(self): Looks ahead to the next character without advancing.
+abort(self, message): Terminates the program with an error message if an invalid token is found.
+skipWhitespace(self): Skips over whitespace characters (spaces, tabs, etc.).
+skipComment(self): Skips over comments (denoted by #).
+getToken(self): Analyzes the current character and generates the next token, handling different kinds of tokens such as operators, numbers, strings, keywords, and identifiers.
+The Lexer class handles all the work of scanning the source code, skipping unnecessary characters (like whitespace and comments), and categorizing the different tokens it encounters.
+
+2. Token Class
+The Token class is a representation of a single unit (or token) that the lexer has identified in the source code. Each token has two properties: the actual text that makes up the token and the type (or kind) of the token.
+
+Key methods:
+__init__(self, tokenText, tokenKind): Initializes the token with its text and kind.
+checkIfKeyword(tokenText): A static method that checks if the given token text corresponds to a keyword. Keywords are predefined words in the language that have special meaning (e.g., if, while, let).
+The Token class is used to represent different kinds of tokens (such as operators, keywords, identifiers, etc.) and includes logic to identify keywords specifically.
+
+3. TokenType Enum
+TokenType is an enumeration (enum) that defines the various types of tokens the lexer can generate. Each token type represents a different category of language constructs (e.g., keywords, operators, numbers, etc.).
+
+Values:
+EOF: Represents the end of the file/input.
+NEWLINE: Represents a newline character (\n).
+NUMBER: Represents numeric tokens.
+IDENT: Represents identifiers (variable names, function names, etc.).
+STRING: Represents string literals (text enclosed in quotes).
+Keywords: Represent predefined keywords in the language (e.g., LABEL, GOTO, IF, WHILE, etc.).
+Operators: Represent various operators in the language (e.g., PLUS, MINUS, EQ, EQEQ, NOTEQ, etc.).
+The TokenType enum organizes all possible types of tokens, including both keywords and operators, as well as more general categories like numbers and identifiers.
+
+How They Work Together:
+The Lexer scans the source code character by character, trying to match patterns that correspond to different TokenType values.
+When it identifies a valid token (e.g., an operator like +, a number, or a keyword like IF), it creates a Token object to represent that token.
+The Token object stores both the text and the type (from TokenType) of the token.
+The lexer continues this process, skipping unnecessary characters (whitespace and comments) until the entire source code is tokenized.
+In summary, the Lexer is the main component responsible for breaking the source code into individual Token objects based on the rules defined in the TokenType enum.
