@@ -1,0 +1,3 @@
+run code using: 
+
+python3 main.py hello.txt
