@@ -24,7 +24,9 @@ Smol Compiler is a lightweight and minimalistic compiler designed to process a B
 
 ## References:
 [Lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis)
+
 [Parsing](https://en.wikipedia.org/wiki/Parsing)
 
 [@Austin Henley](https://austinhenley.com/blog/teenytinycompiler1.html)
+
 [More stuff](https://craftinginterpreters.com/contents.html)
