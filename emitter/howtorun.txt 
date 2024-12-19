@@ -1,0 +1,8 @@
+To compiler: 
+python3 main.py avg.txt
+
+To emit code and run compiler for real:
+
+python3 main.py avg.txt && gcc out.c && ./a.out
+
+python3 main.py hello.txt && gcc out.c && ./a.out
