@@ -1,6 +1,6 @@
 smol compiler fr 
 
-## Overview
+### Overview
 Smol Compiler is a lightweight and minimalistic compiler designed to process a BASIC dialect using a clean and simple syntax for better readability and ease of use. The compiler is built using a three-stage architecture:
 
 - Lexing: Tokenizes the input code, breaking it into meaningful elements.
@@ -9,20 +9,20 @@ Smol Compiler is a lightweight and minimalistic compiler designed to process a B
 
 - Emitting: Generates C code output, ensuring compatibility with a widely-used language for practical deployment.
 
-## Requirements
+### Requirements
 
 - Python 3.x
 - GCC 
 
-## Main code is located in:
+### Main code is located in:
 ``` /emitter```
 
-## How to run it?
+### How to run it?
 
 - ```python3 main.py hello.txt ``` -> in /parsing & /emitter 
 - ```python3 main.py hello.txt && gcc out.c && ./a.out``` -> in /emitter 
 
-## References:
+### References:
 [Lexical analysis](https://en.wikipedia.org/wiki/Lexical_analysis)
 
 [Parsing](https://en.wikipedia.org/wiki/Parsing)
