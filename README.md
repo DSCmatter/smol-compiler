@@ -1,7 +1,5 @@
-smol compiler fr 
-
 ### Overview
-Smol Compiler is a lightweight and minimalistic compiler designed to process a BASIC dialect using a clean and simple syntax for better readability and ease of use. The compiler is built using a three-stage architecture:
+B2C Transpiler is a lightweight and minimalistic compiler designed to process a BASIC dialect using a clean and simple syntax for better readability and ease of use. The compiler is built using a three-stage architecture:
 
 - Lexing: Tokenizes the input code, breaking it into meaningful elements.
 
